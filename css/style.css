@@ -50,23 +50,34 @@ body {
 	color: rgb( 130, 134, 143 );
 	text-transform: uppercase;
 	padding: 20px 0px;
+	position: fixed;
+	z-index: 99;
+	background-color: #f7fdfe;
+	width: 100%;
 }
 #mainNav a{
 	line-height: 40px;
 	font-size: 14px;
 	padding: 0 30px;
 	display: inline-block;
-	border-radius: 25px;
+	border-bottom: 1px solid transparent;	
 }
 a#logo {
 	font-size: 30px;
 }
-.subMainNav {
+#mainNav .subMainNav {
 	float: right;
 }
-.subMainNav a:hover {
+#mainNav .subMainNav a:hover {
+	border-bottom-color: #0ebfdd;
+}
+#mainNav .subMainNav a.special {
+	margin-left: 15px;
+}
+#mainNav .subMainNav a.special:hover {
 	background-color: #0ebfdd;
 	color: white;
+	border-radius: 25px;
 }
 #intro {
 	background-image: url(../img/hero.jpg);
@@ -157,10 +168,17 @@ a#logo {
 	max-width: 100%;
 	min-width: 960px;
 	height: 600px;
-	background-image: url('../img/map.jpg');
-	background-size: cover; 
-	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
 }
+#map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 /* Footer */
 #footer {
 	background-color: #45494d;
